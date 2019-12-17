@@ -1,3 +1,11 @@
+Missing:
+  - Разберитесь почему все pod в namespace kube-system
+восстановились после удаления. Укажите причину в описании PR
+Hint: core-dns и, например, kube-apiserver, имеют
+различия в механизме запуска и восстанавливаются по
+разным причинам
+
+
 Для запуска minikube (kvm2) на ArchLinux потребовались:
   - libvirtd.service
   - dnsmasq.service
