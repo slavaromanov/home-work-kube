@@ -12,12 +12,8 @@ Hint: core-dns и, например, kube-apiserver, имеют
   - firewalld.service
 
 
-```bash
-kubectl get pod web -o yaml
-```
-
-
 ```YAML
+# kubectl get pod web -o yaml
 apiVersion: v1
 kind: Pod
 metadata:
@@ -107,11 +103,8 @@ status:
   startTime: "2019-12-17T17:01:43Z"
 ```
 
-```bash
-kubectl describe pod web
 ```
-
-```
+# kubectl describe pod web
 Name:         web
 Namespace:    default
 Priority:     0
@@ -163,9 +156,8 @@ Events:
   Normal  Started    3m31s  kubelet, minikube  Started container web
 ```
 
-собираем `Hipster Shop`
-
 ```bash
+# собираем `Hipster Shop`
 git clone git@github.com:GoogleCloudPlatform/microservices-demo.git && \
   cd microservices-demo/src/frontend && \
   docker build --network=host -t fronted . &&
